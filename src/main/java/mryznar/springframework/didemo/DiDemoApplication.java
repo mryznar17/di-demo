@@ -21,9 +21,9 @@ public class DiDemoApplication {
 			Spring creates bean from MyController class named with leading lowercase char with name of class
 			context getBean is not strongly typed so it have to be cased
 		 */
-//		MyController controller = (MyController) ctx.getBean("myController ");
-//		controller.hello();
+		MyController controller = (MyController) ctx.getBean("myController");
 
+		System.out.println(controller.hello());
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(SetterInjectionController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectionController.class).sayHello());

@@ -1,6 +1,7 @@
 package mryznar.springframework.didemo.controllers;
 
 import mryznar.springframework.didemo.services.GreetingService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 @Controller
@@ -12,7 +13,7 @@ public class ConstructorInjectionController {
      * automatic wiring of constructor based components is enabled
      * @param greetingService
      */
-    public ConstructorInjectionController(GreetingService greetingService){
+    public ConstructorInjectionController(@Qualifier("constructorGreetingService") GreetingService greetingService){
         this.greetingService = greetingService;
     }
 

@@ -8,6 +8,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+/**
+ * @SpringBootApplication beside being entry point to Spring application is telling Spring that
+ * Component scan is going to be done from this package down.
+ * To override default component scan "area" @ComponentScan annotation is used ie:
+ * @ComponentScan(basePackages = {"mryznar.springframework.didemo"})
+ */
 @SpringBootApplication
 public class DiDemoApplication {
 

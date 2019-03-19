@@ -9,9 +9,9 @@ import org.springframework.stereotype.Service;
  * In this case it was just changing language, but it might be used for example for changing
  * implementation of Queue/Database etc
  */
-@Service
-@Profile("es")
-@Primary
+//@Service
+//@Profile("es")
+//@Primary
 public class PrimarySpanishGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {

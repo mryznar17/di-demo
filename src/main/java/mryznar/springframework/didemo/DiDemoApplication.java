@@ -4,6 +4,7 @@ import mryznar.springframework.didemo.controllers.ConstructorInjectionController
 import mryznar.springframework.didemo.controllers.MyController;
 import mryznar.springframework.didemo.controllers.PropertyInjectedController;
 import mryznar.springframework.didemo.controllers.SetterInjectionController;
+import mryznar.springframework.didemo.examplebeans.FakeDataSource;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -29,10 +30,12 @@ public class DiDemoApplication {
 		 */
 		MyController controller = (MyController) ctx.getBean("myController");
 
-		System.out.println(controller.hello());
-		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
-		System.out.println(ctx.getBean(SetterInjectionController.class).sayHello());
-		System.out.println(ctx.getBean(ConstructorInjectionController.class).sayHello());
+//		System.out.println(controller.hello());
+//		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
+//		System.out.println(ctx.getBean(SetterInjectionController.class).sayHello());
+//		System.out.println(ctx.getBean(ConstructorInjectionController.class).sayHello());
+		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
+		System.out.println(fakeDataSource.getUrl());
 	}
 
 }

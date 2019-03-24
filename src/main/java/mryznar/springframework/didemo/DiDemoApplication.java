@@ -35,7 +35,7 @@ public class DiDemoApplication {
 //		System.out.println(ctx.getBean(SetterInjectionController.class).sayHello());
 //		System.out.println(ctx.getBean(ConstructorInjectionController.class).sayHello());
 		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
-		System.out.println(fakeDataSource.getUrl());
+		System.out.println(fakeDataSource.getUser());
 	}
 
 }
